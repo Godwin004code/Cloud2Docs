@@ -22,8 +22,14 @@ body {
 body.light {
     background-color: white;
     color: $light_text;
+    & .link, .category{
+        border: 1px solid $little;
+        
+    }
     
-
+    // & .link__container {
+       
+    // }
     & nav a {
         color: $little;
     }
@@ -61,6 +67,13 @@ body.light {
            display: block;
        }
     }
+    & .read {
+        background-color: $little;
+         & a {
+             
+             color: white;
+         }
+     }
 }
 
 
@@ -71,11 +84,26 @@ body.dark {
     background-color: $little;
     color: white;
    
-
+    & .link__container {
+        & .link {
+            border: 1px solid #ccc;
+        }
+    }
+    & .category {
+        border: 1px solid #ccc;
+    }
     & nav a {
         color: white;
     }
-
+    & .offer__head {
+        border-bottom: 2px solid #ccc;
+    }
+    & .offer__container {
+       
+        & .icon {
+            color: #006466;
+        }
+    }
     & .submenu ul {
         background-color: white;
 
@@ -102,6 +130,13 @@ body.dark {
         .moon {
             display: none;
         }
+     }
+     & .read {
+        background-color: white;
+         & a {
+             
+             color: $little;
+         }
      }
 }
 

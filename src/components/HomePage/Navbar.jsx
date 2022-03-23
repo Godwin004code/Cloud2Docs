@@ -11,8 +11,8 @@ const Navbar = ({ shownav, setShownav }) => {
     <>
       <motion.nav animate={{ opacity: [0, 1] }}>
         <ul>
-          <li>
-            <input className="search" type="text" placeholder="Search" />
+          <li style={{paddingBlockStart: '1.5rem'}}>
+Logo
             <motion.span
             whileTap={{rotate: 360}}>
               <FaTimes className="times" onClick={removeNav} />
@@ -23,37 +23,13 @@ const Navbar = ({ shownav, setShownav }) => {
           </li>
 
           <li onClick={removeNav}>
-            <span>
-              Software Development <FaCaretDown />{" "}
-            </span>
-            <div className="submenu">
-              <ul>
-                <li onClick={removeNav}>
-                  <Link to="/html">HTML</Link>
-                </li>
-                <li onClick={removeNav}>
-                  <Link to="/css">CSS</Link>
-                </li>
-                <li onClick={removeNav}>
-                  <Link to="/js">JavaScript</Link>
-                </li>
-                <li onClick={removeNav}>
-                  <Link to="/react">React</Link>
-                </li>
-                <li onClick={removeNav}>
-                  <Link to="/firebase">Firebase</Link>
-                </li>
-                <li onClick={removeNav}>
-                  <Link to="/git">Git</Link>
-                </li>
-                <li onClick={removeNav}>
-                  <Link to="/python">Python</Link>
-                </li>
-              </ul>
-            </div>
+            <Link to="/category">
+              Categories
+            </Link>
+           
           </li>
           <li onClick={removeNav}>
-            <span>How To</span>
+           <Link to="/howto"> <span>How To</span></Link>
           </li>
           <li>
             <span>
@@ -61,7 +37,7 @@ const Navbar = ({ shownav, setShownav }) => {
             </span>
             <div className="submenu">
               <ul>
-                <li onClick={removeNav}>
+                <li onClick={removeNav} style={{paddingBlockStart: '1.5rem'}}>
                   <Link to="/jsq">JavaScript</Link>
                 </li>
                 <li onClick={removeNav}>
@@ -73,10 +49,12 @@ const Navbar = ({ shownav, setShownav }) => {
               </ul>
             </div>
           </li>
+          
         </ul>
       </motion.nav>
     </>
   );
 };
+
 
 export default Navbar;

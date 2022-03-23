@@ -1,0 +1,46 @@
+@import '../HomePage/Colors';
+.link__container {
+    width: 90%;
+    margin: 3rem auto;
+    
+    display: flex;
+    justify-content: space-between;
+    & .link {
+        width: 24%;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        border-radius: 15px;
+        
+        & img {
+            width: 100%;
+            border-radius: 15px 15px 0 0;
+        }
+    }
+    .read {
+        width: 100%;
+        padding: 1rem 0;
+        border-radius: 0 0 15px 15px;
+        & a {
+            text-decoration: none;
+            width: 100%;
+            
+        }
+    }
+    & .text {
+        padding: .6rem .5rem 1rem .5rem;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .link__container {
+        width: 90%;
+        flex-direction: column;
+        & .link {
+            width: 90%;
+            margin: 0 auto;
+            margin-bottom: 1rem;
+        }
+    }
+}

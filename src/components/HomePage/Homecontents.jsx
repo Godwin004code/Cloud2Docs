@@ -1,14 +1,14 @@
 import React from "react";
-import Homedetails from "./Homedetails";
-import Disclamer from "./Disclamer";
-import Owners from "./Owners";
+import Hero from "./Hero";
+import "./Homecontents.scss"
+import HomeFlex from "./HomeFlex";
+
 
 const Homecontents = () => {
   return (
     <div>
-      <Homedetails className="home__details" />
-      <Disclamer />
-      <Owners />
+     <Hero />
+    <HomeFlex />
     </div>
   );
 };
